@@ -1,0 +1,31 @@
+# Claves y configuración local: NUNCA se suben al repositorio
+.env
+.env.*
+!.env.example
+
+# Dependencias
+node_modules/
+
+# Compilación de Next.js
+.next/
+out/
+build/
+
+# Vercel
+.vercel
+
+# Supabase local
+supabase/.branches
+supabase/.temp
+
+# Pruebas
+coverage/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+*.log
+.vscode/*
+!.vscode/extensions.json
+*.tsbuildinfo
+next-env.d.ts
