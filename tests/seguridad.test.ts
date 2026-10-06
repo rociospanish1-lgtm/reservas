@@ -73,7 +73,8 @@ beforeAll(async () => {
 
 describe("Cada clínica solo ve lo suyo", () => {
   it.each(TABLAS)("la admin de A no ve nada de B en «%s»", async (tabla) => {
-    const { data, error } = await adminA.from(tabla).select("*").eq("clinica_id", B.clinicaId);
+    const columna = tabla === "clinicas" ? "id" : "clinica_id";
+    const { data, error } = await adminA.from(tabla).select("*").eq(columna, B.clinicaId);
     expect(error).toBeNull();
     expect(data).toEqual([]);
   });

@@ -187,7 +187,7 @@ export default async function PaginaAgenda({ params, searchParams }: PageProps<"
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-3">
-        <h1 className="mr-auto text-xl font-semibold capitalize">{tituloFecha}</h1>
+        <h1 className="mr-auto text-xl font-semibold first-letter:uppercase">{tituloFecha}</h1>
         {esAdmin && (
           <Link href={`/clinica/${slug}/agenda/nueva?fecha=${fecha}`} className="boton">
             Nueva cita
